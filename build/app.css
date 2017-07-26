@@ -1,7 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  background: palegoldenrod; }
+  background: palegoldenrod;
+  color: black;
+  font-family: "Goudy Bookletter 1911", Georgia, serif; }
 
 .content {
   width: 98vw;
@@ -13,7 +15,8 @@ body {
     text-align: center;
     margin-bottom: 8px; }
   .content-header {
-    font-size: 5vw; }
+    font-size: 6vw;
+    text-shadow: 1px 1px 0 palegoldenrod, 2px 2px 0 #beba88; }
   .content-subheader {
     font-size: 3vw; }
 
@@ -36,7 +39,7 @@ body {
     margin-left: 1vw; }
 
 .footer {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center; }
   .footer a {
     color: #000; }

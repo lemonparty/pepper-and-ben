@@ -4,6 +4,9 @@
 $width: 1000px;
 $gutter: 1vw;
 
+$bg: palegoldenrod;
+$text: black;
+
 
 // mixins
 // ----------------------------------------------------------------------------
@@ -23,7 +26,9 @@ $gutter: 1vw;
 body {
 	margin: 0;
 	padding: 0;
-	background: palegoldenrod;
+	background: $bg;
+	color: $text;
+	font-family: "Goudy Bookletter 1911", Georgia, serif;
 }
 
 .content {
@@ -39,8 +44,12 @@ body {
 		margin-bottom: 8px;
 	}
 
+	$shadow-size: 1px;
+
 	&-header {
-		font-size: 5vw;
+		font-size: 6vw;
+		text-shadow: $shadow-size $shadow-size 0 $bg,
+			$shadow-size * 2 $shadow-size * 2 0 mix($bg, $text, 80%);
 	}
 
 	&-subheader {
@@ -73,7 +82,7 @@ body {
 }
 
 .footer {
-	font-size: 14px;
+	font-size: 16px;
 	text-align: center;
 
 	a {

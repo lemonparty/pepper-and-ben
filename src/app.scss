@@ -1,3 +1,86 @@
+// variables
+// ----------------------------------------------------------------------------
+
+$width: 1000px;
+$gutter: 1vw;
+
+
+// mixins
+// ----------------------------------------------------------------------------
+
+@mixin clearfix {
+	&::after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+}
+
+
+// styles
+// ----------------------------------------------------------------------------
+
 body {
+	margin: 0;
+	padding: 0;
 	background: palegoldenrod;
+}
+
+.content {
+	width: 98vw;
+	max-width: $width;
+	margin: 8vw auto;
+
+	&-header,
+	&-subheader {
+		display: block;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 8px;
+	}
+
+	&-header {
+		font-size: 5vw;
+	}
+
+	&-subheader {
+		font-size: 3vw;
+	}
+}
+
+.photos {
+	@include clearfix;
+
+	&-photo {
+		float: left;
+		margin-bottom: $gutter;
+		background: rgba(#000, 0.1);
+
+		&.isLandscape {
+			width: 100%;
+			padding-top: 70%;
+		}
+
+		&.isPortrait {
+			width: calc(50% - #{$gutter / 2});
+			padding-top: 75%;
+		}
+
+		&.isPortrait + &.isPortrait {
+			margin-left: $gutter;
+		}
+	}
+}
+
+.footer {
+	font-size: 14px;
+	text-align: center;
+
+	a {
+		color: #000;
+
+		&:hover {
+			color: #666;
+		}
+	}
 }

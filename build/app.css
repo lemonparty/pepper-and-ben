@@ -1,2 +1,44 @@
 body {
+  margin: 0;
+  padding: 0;
   background: palegoldenrod; }
+
+.content {
+  width: 98vw;
+  max-width: 1000px;
+  margin: 8vw auto; }
+  .content-header, .content-subheader {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px; }
+  .content-header {
+    font-size: 5vw; }
+  .content-subheader {
+    font-size: 3vw; }
+
+.photos::after {
+  clear: both;
+  content: "";
+  display: table; }
+
+.photos-photo {
+  float: left;
+  margin-bottom: 1vw;
+  background: rgba(0, 0, 0, 0.1); }
+  .photos-photo.isLandscape {
+    width: 100%;
+    padding-top: 70%; }
+  .photos-photo.isPortrait {
+    width: calc(50% - 0.5vw);
+    padding-top: 75%; }
+  .photos-photo.isPortrait + .photos-photo.isPortrait {
+    margin-left: 1vw; }
+
+.footer {
+  font-size: 14px;
+  text-align: center; }
+  .footer a {
+    color: #000; }
+    .footer a:hover {
+      color: #666; }

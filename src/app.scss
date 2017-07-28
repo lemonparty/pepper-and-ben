@@ -2,10 +2,10 @@
 // ----------------------------------------------------------------------------
 
 $width: 1000px;
-$gutter: 1vw;
+$gutter: 2vw;
 
-$bg: palegoldenrod;
-$text: black;
+$bg: #FFEEE0;
+$text: #2c7364;
 
 $loader-bg: #999;
 $loader-fg: #666;
@@ -40,7 +40,7 @@ body {
 }
 
 .content {
-	width: 98vw;
+	width: 96vw;
 	max-width: $width;
 	margin: 8vw auto;
 
@@ -60,7 +60,8 @@ body {
 			$shadow-size * 2 $shadow-size * 2 0 mix($bg, $text, 80%);
 
 		@media (max-width: 700px) {
-			font-size: 30px;
+			margin: 0;
+			font-size: 36px;
 		}
 	}
 
@@ -68,6 +69,7 @@ body {
 		font-size: 3vw;
 
 		@media (max-width: 700px) {
+			margin: 0;
 			font-size: 20px;
 		}
 	}
@@ -81,7 +83,7 @@ body {
 		overflow: hidden;
 		float: left;
 		margin-bottom: $gutter;
-		background: rgba(#000, 0.1);
+		background: rgba(#000, 0.05);
 		border-radius: 2px;
 
 		&.isLoading {
@@ -143,11 +145,15 @@ body {
 	font-size: 16px;
 	text-align: center;
 
+	@media (max-width: 360px) {
+		font-size: 14px;
+	}
+
 	a {
-		color: #000;
+		color: $text;
 
 		&:hover {
-			color: #666;
+			color: lighten($text, 15%);
 		}
 	}
 }

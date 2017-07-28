@@ -2,7 +2,7 @@ import $ from "jquery";
 import throttle from "throttle-debounce/throttle";
 
 const LazyImages = {
-	buffer: 500,
+	buffer: 1200,
 
 	init() {
 		// load images onscreen at init

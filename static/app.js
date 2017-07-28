@@ -90,7 +90,7 @@ __WEBPACK_IMPORTED_MODULE_0__lazy_images__["a" /* default */].init();
 
 
 const LazyImages = {
-	buffer: 500,
+	buffer: 1200,
 
 	init() {
 		// load images onscreen at init

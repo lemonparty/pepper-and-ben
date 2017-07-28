@@ -1,0 +1,90 @@
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg); } }
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: palegoldenrod;
+  color: black;
+  font-family: "Goudy Bookletter 1911", Georgia, serif; }
+
+.content {
+  width: 98vw;
+  max-width: 1000px;
+  margin: 8vw auto; }
+  .content-header, .content-subheader {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px; }
+  .content-header {
+    font-size: 6vw;
+    text-shadow: 1px 1px 0 palegoldenrod, 2px 2px 0 #beba88; }
+  .content-subheader {
+    font-size: 3vw; }
+
+.photos::after {
+  clear: both;
+  content: "";
+  display: table; }
+
+.photos-photo {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 1vw;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 2px; }
+  .photos-photo.isLoading::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    width: 30px;
+    height: 30px;
+    border: 6px solid #999;
+    border-bottom-color: #666;
+    border-radius: 50%;
+    -webkit-animation: spin 3000ms linear infinite;
+    -moz-animation: spin 3000ms linear infinite;
+    animation: spin 3000ms linear infinite; }
+  .photos-photo.isLoading img {
+    opacity: 0; }
+  .photos-photo.isLandscape {
+    width: 100%;
+    padding-top: 70%; }
+  .photos-photo.isPortrait {
+    width: calc(50% - 0.5vw);
+    padding-top: 75%; }
+  .photos-photo.isPortrait + .photos-photo.isPortrait {
+    margin-left: 1vw; }
+  .photos-photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    -webkit-transition: opacity 200ms linear;
+    -moz-transition: opacity 200ms linear;
+    transition: opacity 200ms linear; }
+
+.footer {
+  font-size: 16px;
+  text-align: center; }
+  .footer a {
+    color: #000; }
+    .footer a:hover {
+      color: #666; }

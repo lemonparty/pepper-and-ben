@@ -14,7 +14,7 @@ function createConfig(params) {
 	};
 
 	const output = {
-		path: __dirname + "/../build",
+		path: __dirname + "/../dist",
 		filename: `[name]${min}.js`,
 		publicPath: "./",
 	};

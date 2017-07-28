@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>
+			Pepper and Ben
+		</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no" />
+
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911"
+		>
+
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='app.css') }}"
+		/>
+	</head>
+	<body>
+		<div class="content">
+			<span class="content-header">
+				Pepper &amp; Ben
+			</span>
+			<span class="content-subheader">
+				June 24, 2017
+			</span>
+			<span class="content-subheader">
+				Duluth, MN
+			</span>
+		</div>
+
+		<div class="content photos">
+			{% for image in images %}
+				{% include "image.html" %}
+			{% endfor %}
+		</div>
+
+		<div class="content footer">
+			Photos by <a href="http://mgeraci.com">Michael P. Geraci</a> and <a href="http://katherineerickson.com">Katherine Erickson</a>.
+			<br />
+			Congratulations, Pepper and Ben!
+		</div>
+
+		<script
+			type="text/javascript"
+			src="{{ url_for('static', filename='app.js') }}"
+		></script>
+	</body>
+</html>

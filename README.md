@@ -9,12 +9,11 @@ and some JavaScript to lazily load them on scroll.
 * clone the repo
 * `mkvirtualenv pepper-and-ben`
 * `pip install -r requirements.txt`
-* `python app.py`
+* `python pepper-and-ben.py`
 
 The CSS is written using SASS and JS is in es6. Both are managed with webpack.
-Assuming you already have node and npm installed:
+Assuming you already have node and npm installed, run `npm install` to install
+the packages required for this app.
 
-`npm install`
-
-Then to start gulp watching and compiling the files, run: `npm run watch`. To
+Then to start webpack watching and compiling the files, run `npm run watch`. To
 compile the minified files for use in production, run `npm run build`.

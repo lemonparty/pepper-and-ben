@@ -1,1 +1,1 @@
-from app import app as application
+from pepper_and_ben import app as application

@@ -24,6 +24,15 @@ def index_route(params={}):
     }, {
         'id': '5',
         'orientation': 'landscape',
+    }, {
+        'id': '6',
+        'orientation': 'landscape',
+    }, {
+        'id': '7',
+        'orientation': 'landscape',
+    }, {
+        'id': '8',
+        'orientation': 'landscape',
     },]
 
     return render_template('index.html', images=images)

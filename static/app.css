@@ -30,8 +30,14 @@ body {
   .content-header {
     font-size: 6vw;
     text-shadow: 1px 1px 0 palegoldenrod, 2px 2px 0 #beba88; }
+    @media (max-width: 700px) {
+      .content-header {
+        font-size: 30px; } }
   .content-subheader {
     font-size: 3vw; }
+    @media (max-width: 700px) {
+      .content-subheader {
+        font-size: 20px; } }
 
 .photos::after {
   clear: both;

@@ -3,6 +3,7 @@
 
 $width: 1200px;
 $gutter: 2vw;
+$br: 2px;
 
 $bg: #FFEEE0;
 $text: #2c7364;
@@ -84,7 +85,7 @@ body {
 		float: left;
 		margin-bottom: $gutter;
 		background: rgba(#000, 0.05);
-		border-radius: 2px;
+		border-radius: $br;
 
 		&.isLoading {
 			&::after {
@@ -108,7 +109,7 @@ body {
 				animation: spin 3000ms linear infinite;
 			}
 
-			img {
+			.photos-photo-content {
 				opacity: 0;
 			}
 		}
@@ -127,12 +128,17 @@ body {
 			margin-left: $gutter;
 		}
 
-		img {
+		&-content {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: auto;
+			height: 100%;
+			border-radius: $br;
+
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
 
 			-webkit-transition: opacity 200ms linear;
 			-moz-transition: opacity 200ms linear;

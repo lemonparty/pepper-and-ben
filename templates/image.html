@@ -1,4 +1,7 @@
-<div
+<a
+	href="{{
+		url_for('static', filename='images/%s.jpeg'|format(image.id))
+	}}"
 	data-lazy-image="{{
 		url_for('static', filename='images/%s.jpeg'|format(image.id))
 	}}"
@@ -6,4 +9,4 @@
 		photos-photo
 		{% if image.orientation == 'landscape' %}isLandscape{% else %}isPortrait{% endif %}
 	"
-></div>
+></a>

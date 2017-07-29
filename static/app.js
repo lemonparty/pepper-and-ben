@@ -112,15 +112,23 @@ const LazyImages = {
 
 	loadImage(el) {
 		el.addClass("isLoading")
-		const src = el.attr("data-lazy-image") || "http://lorempixel.com/1000/1000/animals/";
+		let src = el.attr("data-lazy-image");
 		const img = new Image();
+
+		if (src.indexOf("/") === 0) {
+			src = src.slice(1);
+		}
 
 		// remove the data attribute to keep it from loading again
 		el.removeAttr("data-lazy-image");
 
 		__WEBPACK_IMPORTED_MODULE_0_jquery___default()(img).on("load", () => {
-			el.append(img);
-			__WEBPACK_IMPORTED_MODULE_0_jquery___default()(img).css("opacity");
+			let imageUrl = location.href + src;
+			const res = __WEBPACK_IMPORTED_MODULE_0_jquery___default()("<div />");
+			res.addClass("photos-photo-content")
+				.css("background-image", `url(${imageUrl})`);
+			el.append(res);
+			el.css("opacity");
 			el.removeClass("isLoading");
 		}).attr("src", src)
 	},

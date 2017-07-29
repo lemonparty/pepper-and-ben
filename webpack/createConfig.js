@@ -5,7 +5,7 @@ function createConfig(params) {
 	const webpack = require("webpack");
 	const ExtractTextPlugin = require("extract-text-webpack-plugin");
 	const WebpackNotifierPlugin = require("webpack-notifier");
-	const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+	const ParallelUglifyESPlugin = require("webpack-parallel-uglify-es-plugin");
 
 
 	// settings common to both `watch` and `build`
@@ -57,8 +57,7 @@ function createConfig(params) {
 		);
 
 		plugins.push(
-			new UglifyJsPlugin({
-				ecma: 6,
+			new ParallelUglifyESPlugin({
 				compress: {
 					warnings: false,
 				},

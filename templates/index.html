@@ -14,13 +14,19 @@
 		<link
 			rel="stylesheet"
 			type="text/css"
-			href="{{ url_for('static', filename='app.css') }}"
+			href="
+				{%- if debug -%}
+					{{ url_for('static', filename='app.css') }}
+				{%- else -%}
+					{{ url_for('static', filename='app.min.css') }}
+				{%- endif -%}
+			"
 		/>
 	</head>
 	<body>
 		<div class="content">
 			<span class="content-header">
-				Pepper &amp; Ben
+				Pepper &amp; Ben {{ debug }}
 			</span>
 			<span class="content-subheader">
 				June 24, 2017
@@ -44,7 +50,13 @@
 
 		<script
 			type="text/javascript"
-			src="{{ url_for('static', filename='app.js') }}"
+			src="
+				{%- if debug -%}
+					{{ url_for('static', filename='app.js') }}
+				{%- else -%}
+					{{ url_for('static', filename='app.min.js') }}
+				{%- endif -%}
+			"
 		></script>
 	</body>
 </html>

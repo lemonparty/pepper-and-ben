@@ -1,0 +1,111 @@
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg); } }
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #FFEEE0;
+  color: #2c7364;
+  font-family: "Goudy Bookletter 1911", Georgia, serif; }
+
+.content {
+  width: 96vw;
+  max-width: 1200px;
+  margin: 5vw auto; }
+  .content-header, .content-subheader {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px; }
+  .content-header {
+    font-size: 6vw;
+    text-shadow: 1px 1px 0 #FFEEE0, 2px 2px 0 #d5d5c7; }
+    @media (max-width: 700px) {
+      .content-header {
+        margin: 0;
+        font-size: 36px; } }
+    @media (min-width: 1250px) {
+      .content-header {
+        font-size: 75px; } }
+  .content-subheader {
+    font-size: 3vw; }
+    @media (max-width: 700px) {
+      .content-subheader {
+        margin: 0;
+        font-size: 20px; } }
+    @media (min-width: 1250px) {
+      .content-subheader {
+        font-size: 36px; } }
+
+.photos::after {
+  clear: both;
+  content: "";
+  display: table; }
+
+.photos-photo {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 2vw;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 2px; }
+  .photos-photo.isLoading::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    width: 30px;
+    height: 30px;
+    border: 6px solid #ccbeb3;
+    border-bottom-color: #998f86;
+    border-radius: 50%;
+    -webkit-animation: spin 3000ms linear infinite;
+    -moz-animation: spin 3000ms linear infinite;
+    animation: spin 3000ms linear infinite; }
+  .photos-photo.isLoading .photos-photo-content {
+    opacity: 0; }
+  .photos-photo.isLandscape {
+    width: 100%;
+    padding-top: 70%; }
+  .photos-photo.isPortrait {
+    width: calc(50% - 1vw);
+    padding-top: 75%; }
+  .photos-photo.isPortrait + .photos-photo.isPortrait {
+    margin-left: 2vw; }
+  .photos-photo-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-transition: opacity 200ms linear;
+    -moz-transition: opacity 200ms linear;
+    transition: opacity 200ms linear; }
+
+.footer {
+  font-size: 16px;
+  text-align: center; }
+  @media (max-width: 360px) {
+    .footer {
+      font-size: 14px; } }
+  .footer a {
+    color: #2c7364; }
+    .footer a:hover {
+      color: #41aa94; }

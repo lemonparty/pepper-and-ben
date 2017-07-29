@@ -11,6 +11,12 @@ and some JavaScript to lazily load them on scroll.
 * `pip install -r requirements.txt`
 * `python pepper-and-ben.py`
 
+You'll also need to create a file called `localsettings.py`, which controls the
+debug state of the application, as well as if it should load development or
+minified static assets. The file just needs the key `DEBUG`, so an example is:
+
+    DEBUG = False
+
 The CSS is written using SASS and JS is in es6. Both are managed with webpack.
 Assuming you already have node and npm installed, run `npm install` to install
 the packages required for this app.

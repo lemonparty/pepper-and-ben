@@ -21,7 +21,7 @@ body {
 .content {
   width: 96vw;
   max-width: 1200px;
-  margin: 8vw auto; }
+  margin: 5vw auto; }
   .content-header, .content-subheader {
     display: block;
     width: 100%;
@@ -34,12 +34,18 @@ body {
       .content-header {
         margin: 0;
         font-size: 36px; } }
+    @media (min-width: 1250px) {
+      .content-header {
+        font-size: 75px; } }
   .content-subheader {
     font-size: 3vw; }
     @media (max-width: 700px) {
       .content-subheader {
         margin: 0;
         font-size: 20px; } }
+    @media (min-width: 1250px) {
+      .content-subheader {
+        font-size: 36px; } }
 
 .photos::after {
   clear: both;
@@ -63,8 +69,8 @@ body {
     margin-left: -15px;
     width: 30px;
     height: 30px;
-    border: 6px solid #999;
-    border-bottom-color: #666;
+    border: 6px solid #ccbeb3;
+    border-bottom-color: #998f86;
     border-radius: 50%;
     -webkit-animation: spin 3000ms linear infinite;
     -moz-animation: spin 3000ms linear infinite;

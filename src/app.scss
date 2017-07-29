@@ -8,8 +8,8 @@ $br: 2px;
 $bg: #FFEEE0;
 $text: #2c7364;
 
-$loader-bg: #999;
-$loader-fg: #666;
+$loader-bg: mix($bg, #000, 80%);
+$loader-fg: mix($bg, #000, 60%);
 $loader-size: 30px;
 
 
@@ -43,7 +43,7 @@ body {
 .content {
 	width: 96vw;
 	max-width: $width;
-	margin: 8vw auto;
+	margin: 5vw auto;
 
 	&-header,
 	&-subheader {
@@ -64,6 +64,10 @@ body {
 			margin: 0;
 			font-size: 36px;
 		}
+
+		@media (min-width: 1250px) {
+			font-size: 75px;
+		}
 	}
 
 	&-subheader {
@@ -72,6 +76,10 @@ body {
 		@media (max-width: 700px) {
 			margin: 0;
 			font-size: 20px;
+		}
+
+		@media (min-width: 1250px) {
+			font-size: 36px;
 		}
 	}
 }

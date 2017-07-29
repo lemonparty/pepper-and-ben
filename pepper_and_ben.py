@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+from localsettings import DEBUG
 
 app = Flask(__name__)
 
@@ -35,11 +36,11 @@ def index_route(params={}):
         'orientation': 'landscape',
     },]
 
-    return render_template('index.html', images=images)
+    return render_template('index.html', images=images, debug=DEBUG)
 
 
 # init
 # -----------------------------------------------------------------------------
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=DEBUG, host='0.0.0.0')

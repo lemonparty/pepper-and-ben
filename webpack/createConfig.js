@@ -1,9 +1,11 @@
 function createConfig(params) {
 	const isProduction = params.isProduction;
 	const min = isProduction ? ".min" : "";
+
 	const webpack = require("webpack");
 	const ExtractTextPlugin = require("extract-text-webpack-plugin");
 	const WebpackNotifierPlugin = require("webpack-notifier");
+	const ParallelUglifyESPlugin = require("webpack-parallel-uglify-es-plugin");
 
 
 	// settings common to both `watch` and `build`
@@ -55,7 +57,7 @@ function createConfig(params) {
 		);
 
 		plugins.push(
-			new webpack.optimize.UglifyJsPlugin({
+			new ParallelUglifyESPlugin({
 				compress: {
 					warnings: false,
 				},

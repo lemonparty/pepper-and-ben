@@ -74,6 +74,9 @@ def index_route(params={}):
         'id': '67',
         'orientation': 'landscape',
     }, {
+        'id': '234',
+        'orientation': 'portrait',
+    }, {
         'id': '70',
         'orientation': 'portrait',
     }, {
@@ -107,6 +110,9 @@ def index_route(params={}):
         'id': '110',
         'orientation': 'portrait',
     }, {
+        'id': '158',
+        'orientation': 'portrait',
+    }, {
         'id': '122',
         'orientation': 'portrait',
     }, {
@@ -126,9 +132,6 @@ def index_route(params={}):
         'orientation': 'portrait',
     }, {
         'id': '153',
-        'orientation': 'portrait',
-    }, {
-        'id': '158',
         'orientation': 'portrait',
     }, {
         'id': '167',
@@ -162,9 +165,6 @@ def index_route(params={}):
         'orientation': 'landscape',
     }, {
         'id': '220',
-        'orientation': 'portrait',
-    }, {
-        'id': '234',
         'orientation': 'portrait',
     }, {
         'id': '238',
@@ -209,9 +209,6 @@ def index_route(params={}):
         'id': '334',
         'orientation': 'landscape',
     }, {
-        'id': '339',
-        'orientation': 'landscape',
-    }, {
         'id': '340',
         'orientation': 'portrait',
     }, {
@@ -234,6 +231,9 @@ def index_route(params={}):
         'orientation': 'portrait',
     }, {
         'id': '374',
+        'orientation': 'landscape',
+    }, {
+        'id': '339',
         'orientation': 'landscape',
     }, {
         'id': '388',
@@ -284,9 +284,6 @@ def index_route(params={}):
         'id': '452',
         'orientation': 'portrait',
     }, {
-        'id': '459',
-        'orientation': 'portrait',
-    }, {
         'id': '463',
         'orientation': 'landscape',
     }, {
@@ -318,6 +315,9 @@ def index_route(params={}):
         'orientation': 'portrait',
     }, {
         'id': '540',
+        'orientation': 'portrait',
+    }, {
+        'id': '459',
         'orientation': 'portrait',
     }, {
         'id': '555',
@@ -353,11 +353,11 @@ def index_route(params={}):
         'id': '612',
         'orientation': 'landscape',
     }, {
-        'id': '622',
-        'orientation': 'landscape',
-    }, {
         'id': '630',
         'orientation': 'portrait',
+    }, {
+        'id': '622',
+        'orientation': 'landscape',
     }, {
         'id': '641',
         'orientation': 'landscape',
@@ -425,10 +425,16 @@ def index_route(params={}):
         'id': '848',
         'orientation': 'landscape',
     }, {
+        'id': '886',
+        'orientation': 'landscape',
+    }, {
         'id': '860',
         'orientation': 'landscape',
     }, {
-        'id': '886',
+        'id': '961',
+        'orientation': 'landscape',
+    }, {
+        'id': '966',
         'orientation': 'landscape',
     }, {
         'id': '889',
@@ -456,12 +462,6 @@ def index_route(params={}):
         'orientation': 'landscape',
     }, {
         'id': '948',
-        'orientation': 'landscape',
-    }, {
-        'id': '961',
-        'orientation': 'landscape',
-    }, {
-        'id': '966',
         'orientation': 'landscape',
     }, {
         'id': '977',

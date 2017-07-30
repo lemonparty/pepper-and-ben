@@ -2,7 +2,7 @@
 // ----------------------------------------------------------------------------
 
 $width: 1200px;
-$gutter: 2vw;
+$gutter: 1.5vw;
 $br: 2px;
 
 $bg: #fdf5ee;
@@ -129,7 +129,7 @@ body {
 
 		&.isPortrait {
 			width: calc(50% - #{$gutter / 2});
-			padding-top: 100%;
+			padding-top: 73.802%;
 		}
 
 		&.isPortrait + &.isPortrait {

@@ -56,7 +56,7 @@ body {
   position: relative;
   overflow: hidden;
   float: left;
-  margin-bottom: 2vw;
+  margin-bottom: 1.5vw;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 2px; }
   .photos-photo.isLoading::after {
@@ -81,10 +81,10 @@ body {
     width: 100%;
     padding-top: 66.667%; }
   .photos-photo.isPortrait {
-    width: calc(50% - 1vw);
-    padding-top: 100%; }
+    width: calc(50% - 0.75vw);
+    padding-top: 73.802%; }
   .photos-photo.isPortrait + .photos-photo.isPortrait {
-    margin-left: 2vw; }
+    margin-left: 1.5vw; }
   .photos-photo-content {
     position: absolute;
     top: 0;

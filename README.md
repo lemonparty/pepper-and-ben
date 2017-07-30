@@ -1,25 +1,26 @@
 # Pepper and Ben
-A website to show photos from Pepper and Ben's wedding
+_Pepper and Ben_ is a website to show photos from Pepper and Ben's wedding.
 
-The guts of it are a simple flask app to loop through an array of photo sources,
-and some JavaScript to lazily load them on scroll.
+It's a simple Flask app which loops through an array of photo sources, and
+uses a little JavaScript to lazily load them on scroll.
 
 ## Installation
 
+Assuming you have python and virtualenvwrapper on your system:
 * clone the repo
-* `mkvirtualenv pepper-and-ben`
-* `pip install -r requirements.txt`
-* `python pepper-and-ben.py`
+* create a virtual environemnt with `mkvirtualenv pepper-and-ben`
+* install the required python packages with `pip install -r requirements.txt`
+* start the server with `python pepper-and-ben.py`
 
-You'll also need to create a file called `localsettings.py`, which controls the
+You'll need to create a file called `localsettings.py`, which controls the
 debug state of the application, as well as if it should load development or
 minified static assets. The file just needs the key `DEBUG`, so an example is:
 
     DEBUG = False
 
-The CSS is written using SASS and JS is in es6. Both are managed with webpack.
-Assuming you already have node and npm installed, run `npm install` to install
-the packages required for this app.
+The CSS is written using SASS, and the JS is written in es6. Both are managed
+with webpack. Assuming you already have node and npm installed, run `npm install`
+to install the JS packages required for this app.
 
 Then to start webpack watching and compiling the files, run `npm run watch`. To
 compile the minified files for use in production, run `npm run build`.

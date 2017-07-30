@@ -10,20 +10,28 @@ app = Flask(__name__)
 
 @app.route('/')
 def index_route(params={}):
-    images = [
+    rows = [
         # overall setting
-        {'id': '6', 'orientation': 'landscape'},
-        {'id': '10', 'orientation': 'portrait'},
-        {'id': '12', 'orientation': 'portrait'},
-        {'id': '18', 'orientation': 'portrait'},
-        {'id': '21', 'orientation': 'portrait'},
-        {'id': '23', 'orientation': 'portrait'},
-        {'id': '27', 'orientation': 'landscape'},
-        {'id': '31', 'orientation': 'portrait'},
-        {'id': '37', 'orientation': 'portrait'},
-        {'id': '39', 'orientation': 'landscape'},
-        {'id': '311', 'orientation': 'landscape'},
+        [
+            {'id': '6', 'orientation': 'landscape'},
+        ], [
+            {'id': '10', 'orientation': 'portrait'},
+            {'id': '12', 'orientation': 'portrait'},
+        ], [
+            {'id': '21', 'orientation': 'portrait'},
+            {'id': '18', 'orientation': 'portrait'},
+            {'id': '23', 'orientation': 'portrait'},
+        ], [
+            {'id': '27', 'orientation': 'landscape'},
+        ], [
+            {'id': '31', 'orientation': 'portrait'},
+            {'id': '37', 'orientation': 'portrait'},
+        ], [
+            {'id': '39', 'orientation': 'landscape'},
+        ]
+    ]
 
+    images = [
         # pepper in denim
         {'id': '41', 'orientation': 'landscape'},
         {'id': '44', 'orientation': 'portrait'},
@@ -289,7 +297,7 @@ def index_route(params={}):
         {'id': '1364', 'orientation': 'landscape'},  # sunset
     ]
 
-    return render_template('index.html', images=images, debug=DEBUG)
+    return render_template('index.html', images=images, rows=rows, debug=DEBUG)
 
 
 # init

@@ -24,18 +24,18 @@ def index_route(params={}):
         {'id': '39', 'orientation': 'landscape'},
         {'id': '311', 'orientation': 'landscape'},
 
-        # pepper prep pre-dress
+        # pepper in denim
         {'id': '41', 'orientation': 'landscape'},
         {'id': '44', 'orientation': 'portrait'},
         {'id': '48', 'orientation': 'portrait'},
         {'id': '51', 'orientation': 'landscape'},
-        {'id': '53', 'orientation': 'portrait'},
-        {'id': '56', 'orientation': 'portrait'},
-        {'id': '59', 'orientation': 'landscape'},
-        {'id': '62', 'orientation': 'portrait'},
-        {'id': '63', 'orientation': 'landscape'},
+        {'id': '53', 'orientation': 'portrait'},  # liz
+        {'id': '70', 'orientation': 'portrait'},  # amy hair
+        {'id': '56', 'orientation': 'portrait'},  # dress still
+        {'id': '59', 'orientation': 'landscape'},  # rings still
+        {'id': '62', 'orientation': 'portrait'},  # headband and dog
+        {'id': '63', 'orientation': 'landscape'},  # headband still
         {'id': '65', 'orientation': 'portrait'},
-        {'id': '70', 'orientation': 'portrait'},
         {'id': '73', 'orientation': 'portrait'},
         {'id': '81', 'orientation': 'landscape'},
 
@@ -50,16 +50,16 @@ def index_route(params={}):
         {'id': '149', 'orientation': 'portrait'},  # carrying flowers
         {'id': '323', 'orientation': 'portrait'},  # liz smiling
 
-        # ben tie prep, and shoes
+        # ben tie and shoes
         {'id': '111', 'orientation': 'portrait'},
         {'id': '110', 'orientation': 'portrait'},
         {'id': '289', 'orientation': 'landscape'},
 
-        # bubba and baby prep
+        # bubba and baby
         {'id': '122', 'orientation': 'portrait'},
         {'id': '124', 'orientation': 'portrait'},
 
-        # pepper prep post-dress
+        # pepper in dress
         {'id': '167', 'orientation': 'landscape'},
         {'id': '173', 'orientation': 'portrait'},
         {'id': '175', 'orientation': 'portrait'},
@@ -110,20 +110,16 @@ def index_route(params={}):
         {'id': '393', 'orientation': 'landscape'},  # pitbull waiting
 
         # procession
-        {'id': '397', 'orientation': 'portrait'},  # pepper first leg
-        {'id': '401', 'orientation': 'landscape'},
+        {'id': '401', 'orientation': 'landscape'},  # pepper 1st leg
         {'id': '407', 'orientation': 'landscape'},
         {'id': '412', 'orientation': 'portrait'},
-
         {'id': '418', 'orientation': 'landscape'},  # family processing
         {'id': '442', 'orientation': 'landscape'},  # dogs processing
-
         {'id': '423', 'orientation': 'portrait'},  # family sitting
-        {'id': '424', 'orientation': 'portrait'},  # family sitting
-        {'id': '425', 'orientation': 'portrait'},  # family sitting
-
+        {'id': '424', 'orientation': 'portrait'},
+        {'id': '425', 'orientation': 'portrait'},
         {'id': '436', 'orientation': 'portrait'},  # ben on stage
-        {'id': '432', 'orientation': 'portrait'},  # pepper second leg
+        {'id': '432', 'orientation': 'portrait'},  # pepper 2nd leg
         {'id': '447', 'orientation': 'portrait'},  # dad delivery
 
         # ceremony - start
@@ -192,16 +188,17 @@ def index_route(params={}):
         {'id': '1074', 'orientation': 'portrait'},  # cake
         {'id': '1173', 'orientation': 'portrait'},  # lemonade
         {'id': '1209', 'orientation': 'landscape'},  # flowers
-        {'id': '1319', 'orientation': 'portrait'},  # suit on shed
 
-        # reception
-        {'id': '789', 'orientation': 'landscape'},
-        {'id': '785', 'orientation': 'portrait'},
-        {'id': '791', 'orientation': 'portrait'},
-        {'id': '795', 'orientation': 'landscape'},
-        {'id': '800', 'orientation': 'portrait'},
-        {'id': '803', 'orientation': 'portrait'},
-        {'id': '806', 'orientation': 'landscape'},
+        # reception part one - mingling and drinking phase
+        {'id': '789', 'orientation': 'landscape'},  # amy and k carrying stuff
+        {'id': '785', 'orientation': 'portrait'},  # ben mingling
+        {'id': '791', 'orientation': 'portrait'},  # bar scene
+        {'id': '795', 'orientation': 'landscape'},  # folks mingling
+        {'id': '800', 'orientation': 'portrait'},  # bar still
+        {'id': '803', 'orientation': 'portrait'},  # ben mingling
+        {'id': '806', 'orientation': 'landscape'},  # overall scene
+        {'id': '1003', 'orientation': 'portrait'},  # overall scene from afar
+        {'id': '1012', 'orientation': 'portrait'},  # amy being cute
 
         # formals
         {'id': '839', 'orientation': 'landscape'},
@@ -225,40 +222,37 @@ def index_route(params={}):
         {'id': '994', 'orientation': 'landscape'},
         {'id': '995', 'orientation': 'landscape'},
 
-        # reception
-        {'id': '790', 'orientation': 'landscape'},  # overall scene, angled
-        {'id': '1003', 'orientation': 'portrait'},  # overall scene, straight
-        {'id': '1012', 'orientation': 'portrait'},
-        {'id': '1018', 'orientation': 'portrait'},  # dancing
+        # first dance
+        {'id': '1018', 'orientation': 'portrait'},  # ben and pepper dancing
 
         # friend formals (greenhouse)
         {'id': '1054', 'orientation': 'landscape'},
         {'id': '1062', 'orientation': 'landscape'},
         {'id': '1078', 'orientation': 'landscape'},
 
-        # reception
-        {'id': '1088', 'orientation': 'landscape'},
-        {'id': '1103', 'orientation': 'landscape'},
-
-        # the actual rings
+        # the rings are found
         {'id': '1091', 'orientation': 'portrait'},
         {'id': '1097', 'orientation': 'portrait'},
         {'id': '1111', 'orientation': 'portrait'},
         {'id': '1118', 'orientation': 'portrait'},
 
-        # cake
+        # cake cutting
         {'id': '1126', 'orientation': 'portrait'},
         {'id': '1143', 'orientation': 'landscape'},
         {'id': '1146', 'orientation': 'landscape'},
         {'id': '1150', 'orientation': 'portrait'},
-        {'id': '1154', 'orientation': 'landscape'},
-        {'id': '1167', 'orientation': 'portrait'},
+        {'id': '1154', 'orientation': 'landscape'},  # audience reaction
 
-        # reception
-        {'id': '1165', 'orientation': 'portrait'},
-        {'id': '1170', 'orientation': 'landscape'},
-        {'id': '1172', 'orientation': 'landscape'},
-        {'id': '1177', 'orientation': 'portrait'},
+        # reception part two - cake phase
+        {'id': '1167', 'orientation': 'portrait'},  # kids eating cake
+        {'id': '1177', 'orientation': 'portrait'},  # dave and ann cake
+        {'id': '1170', 'orientation': 'landscape'},  # overall scene - closer
+        {'id': '1103', 'orientation': 'landscape'},  # pepper mingling
+        {'id': '1226', 'orientation': 'portrait'},  # jenga
+        {'id': '1207', 'orientation': 'portrait'},  # deb & greens cake
+        {'id': '1165', 'orientation': 'portrait'},  # cooler sitter
+        {'id': '1211', 'orientation': 'landscape'},  # corona girl
+        {'id': '1172', 'orientation': 'landscape'},  # overall scene greenhouse
 
         # kubb
         {'id': '1089', 'orientation': 'portrait'},
@@ -266,32 +260,29 @@ def index_route(params={}):
         {'id': '1189', 'orientation': 'portrait'},
         {'id': '1192', 'orientation': 'portrait'},
         {'id': '1212', 'orientation': 'portrait'},
-        {'id': '1215', 'orientation': 'portrait'},
         {'id': '1219', 'orientation': 'portrait'},
         {'id': '1230', 'orientation': 'portrait'},
 
-        {'id': '1226', 'orientation': 'portrait'},  # jenga
+        # frisbee / playing
+        {'id': '1204', 'orientation': 'landscape'},  # amy throwing
+        {'id': '1228', 'orientation': 'landscape'},  # guy throwing
+        {'id': '1235', 'orientation': 'portrait'},  # dad throwing
+        {'id': '1248', 'orientation': 'portrait'},  # amy and kids
+        {'id': '1241', 'orientation': 'landscape'},  # action shot
 
-        # frisbee
-        {'id': '1204', 'orientation': 'landscape'},
-        {'id': '1228', 'orientation': 'landscape'},
-        {'id': '1235', 'orientation': 'portrait'},
-        {'id': '1241', 'orientation': 'landscape'},
+        # reception part three - wind down
+        {'id': '1221', 'orientation': 'landscape'},  # overall scene - late
+        {'id': '1319', 'orientation': 'portrait'},  # suit jacket on shed
+        {'id': '1240', 'orientation': 'portrait'},  # bros
+        {'id': '1243', 'orientation': 'portrait'},  # cute couple #1
+        {'id': '1391', 'orientation': 'portrait'},  # maggie and kurt
 
-        # reception
-        {'id': '1248', 'orientation': 'portrait'},
-        {'id': '1207', 'orientation': 'portrait'},
-        {'id': '1211', 'orientation': 'landscape'},
-        {'id': '1221', 'orientation': 'landscape'},
-        {'id': '1240', 'orientation': 'portrait'},
-        {'id': '1243', 'orientation': 'portrait'},
-        {'id': '1391', 'orientation': 'portrait'},
-
-        # shed & solar
+        # epic couple - shed & solar
         {'id': '1259', 'orientation': 'portrait'},
         {'id': '1285', 'orientation': 'landscape'},
         {'id': '1369', 'orientation': 'landscape'},
 
+        # goodnight
         {'id': '1401', 'orientation': 'landscape'},  # tractor
         {'id': '1393', 'orientation': 'portrait'},  # pepper and ben
         {'id': '1403', 'orientation': 'portrait'},  # with deb

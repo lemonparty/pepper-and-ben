@@ -37,9 +37,11 @@
 		</div>
 
 		<div class="content photos">
-			{% for image in images %}
-				{% include "image.html" %}
-			{% endfor %}
+      {% for row in rows %}
+        {% for image in row %}
+          {% include "image.html" %}
+        {% endfor %}
+      {% endfor %}
 		</div>
 
 		<div class="content footer">

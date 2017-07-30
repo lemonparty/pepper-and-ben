@@ -6,17 +6,17 @@ uses a little JavaScript to lazily load them on scroll.
 
 ## Installation
 
-Assuming you have python and virtualenvwrapper on your system:
-* clone the repo
-* create a virtual environemnt with `mkvirtualenv pepper-and-ben`
-* install the required python packages with `pip install -r requirements.txt`
-* start the server with `python pepper-and-ben.py`
-
 You'll need to create a file called `localsettings.py`, which controls the
 debug state of the application, as well as if it should load development or
 minified static assets. The file just needs the key `DEBUG`, so an example is:
 
     DEBUG = False
+
+Assuming you have python and virtualenvwrapper on your system:
+* clone the repo
+* create a virtual environemnt with `mkvirtualenv pepper-and-ben`
+* install the required python packages with `pip install -r requirements.txt`
+* start the server (at http://localhost:5000) with `python pepper-and-ben.py`
 
 The CSS is written using SASS, and the JS is written in es6. Both are managed
 with webpack. Assuming you already have node and npm installed, run `npm install`

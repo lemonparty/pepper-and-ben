@@ -31,8 +31,8 @@ def index_route(params={}):
         {'id': '51', 'orientation': 'landscape'},
         {'id': '53', 'orientation': 'portrait'},  # liz
         {'id': '70', 'orientation': 'portrait'},  # amy hair
-        {'id': '56', 'orientation': 'portrait'},  # dress still
         {'id': '59', 'orientation': 'landscape'},  # rings still
+        {'id': '56', 'orientation': 'portrait'},  # dress still
         {'id': '62', 'orientation': 'portrait'},  # headband and dog
         {'id': '63', 'orientation': 'landscape'},  # headband still
         {'id': '65', 'orientation': 'portrait'},
@@ -65,12 +65,12 @@ def index_route(params={}):
         {'id': '175', 'orientation': 'portrait'},
         {'id': '176', 'orientation': 'portrait'},
         {'id': '177', 'orientation': 'portrait'},
-        {'id': '180', 'orientation': 'portrait'},
-        {'id': '181', 'orientation': 'portrait'},
-        {'id': '184', 'orientation': 'landscape'},
-        {'id': '191', 'orientation': 'portrait'},
-        {'id': '196', 'orientation': 'landscape'},
-        {'id': '220', 'orientation': 'portrait'},
+        {'id': '184', 'orientation': 'landscape'},  # bouquet handing
+        {'id': '180', 'orientation': 'portrait'},  # bouquet holding
+        {'id': '191', 'orientation': 'portrait'},  # amy reaction
+        {'id': '196', 'orientation': 'landscape'},  # mike bouquet
+        {'id': '181', 'orientation': 'portrait'},  # bouquet closeup
+        {'id': '220', 'orientation': 'portrait'},  # shoes on
 
         # ben reading prep
         {'id': '129', 'orientation': 'portrait'},

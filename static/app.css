@@ -79,10 +79,10 @@ body {
     opacity: 0; }
   .photos-photo.isLandscape {
     width: 100%;
-    padding-top: 70%; }
+    padding-top: 66.667%; }
   .photos-photo.isPortrait {
     width: calc(50% - 1vw);
-    padding-top: 75%; }
+    padding-top: 100%; }
   .photos-photo.isPortrait + .photos-photo.isPortrait {
     margin-left: 2vw; }
   .photos-photo-content {

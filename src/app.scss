@@ -124,12 +124,12 @@ body {
 
 		&.isLandscape {
 			width: 100%;
-			padding-top: 70%;
+			padding-top: 66.667%;
 		}
 
 		&.isPortrait {
 			width: calc(50% - #{$gutter / 2});
-			padding-top: 75%;
+			padding-top: 100%;
 		}
 
 		&.isPortrait + &.isPortrait {

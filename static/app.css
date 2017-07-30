@@ -14,8 +14,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: #FFEEE0;
-  color: #2c7364;
+  background: #fdf5ee;
+  color: #316373;
   font-family: "Goudy Bookletter 1911", Georgia, serif; }
 
 .content {
@@ -29,7 +29,7 @@ body {
     margin-bottom: 8px; }
   .content-header {
     font-size: 6vw;
-    text-shadow: 1px 1px 0 #FFEEE0, 2px 2px 0 #d5d5c7; }
+    text-shadow: 1px 1px 0 #fdf5ee, 2px 2px 0 #d4d8d5; }
     @media (max-width: 700px) {
       .content-header {
         margin: 0;
@@ -69,8 +69,8 @@ body {
     margin-left: -15px;
     width: 30px;
     height: 30px;
-    border: 6px solid #ccbeb3;
-    border-bottom-color: #998f86;
+    border: 6px solid #cac4be;
+    border-bottom-color: #98938f;
     border-radius: 50%;
     -webkit-animation: spin 3000ms linear infinite;
     -moz-animation: spin 3000ms linear infinite;
@@ -106,6 +106,6 @@ body {
     .footer {
       font-size: 14px; } }
   .footer a {
-    color: #2c7364; }
+    color: #316373; }
     .footer a:hover {
-      color: #41aa94; }
+      color: #4891a9; }

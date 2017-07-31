@@ -37,11 +37,13 @@
 		</div>
 
 		<div class="content photos">
-      {% for row in rows %}
-        {% for image in row %}
-          {% include "image.html" %}
-        {% endfor %}
-      {% endfor %}
+			{% for row in rows %}
+				<div class="photos-row {{ row|get_row_class }}">
+					{% for image in row %}
+						{% include "image.html" %}
+					{% endfor %}
+				</div>
+			{% endfor %}
 		</div>
 
 		<div class="content footer">

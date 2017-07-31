@@ -5,6 +5,10 @@ from localsettings import DEBUG
 app = Flask(__name__)
 
 
+def children_are_same_orientation(row):
+    len({item['orientation'] for item in row}) == 1
+
+
 # routes
 # -----------------------------------------------------------------------------
 

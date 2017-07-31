@@ -52,13 +52,24 @@ body {
   content: "";
   display: table; }
 
+.photos-row {
+  width: 100%; }
+  .photos-row::after {
+    clear: both;
+    content: "";
+    display: table; }
+
 .photos-photo {
   position: relative;
   overflow: hidden;
   float: left;
-  margin-bottom: 2vw;
+  margin-right: 1.5vw;
+  margin-bottom: 1.5vw;
+  width: 100%;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 2px; }
+  .photos-photo:last-child {
+    margin-right: 0; }
   .photos-photo.isLoading::after {
     content: "";
     display: block;
@@ -78,13 +89,39 @@ body {
   .photos-photo.isLoading .photos-photo-content {
     opacity: 0; }
   .photos-photo.isLandscape {
-    width: 100%;
-    padding-top: 66.667%; }
+    position: relative; }
+    .photos-photo.isLandscape:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 66.66667%; }
+    .photos-photo.isLandscape .photos-photo-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
   .photos-photo.isPortrait {
-    width: calc(50% - 1vw);
-    padding-top: 100%; }
-  .photos-photo.isPortrait + .photos-photo.isPortrait {
-    margin-left: 2vw; }
+    position: relative; }
+    .photos-photo.isPortrait:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 150%; }
+    .photos-photo.isPortrait .photos-photo-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+  .column-1 .photos-photo {
+    width: calc((100% - 0vw) / 1); }
+  .column-2 .photos-photo {
+    width: calc((100% - 1.5vw) / 2); }
+  .column-3 .photos-photo {
+    width: calc((100% - 3vw) / 3); }
+  .column-4 .photos-photo {
+    width: calc((100% - 4.5vw) / 4); }
   .photos-photo-content {
     position: absolute;
     top: 0;

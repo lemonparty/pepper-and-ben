@@ -15,23 +15,23 @@ def children_are_same_orientation(row):
 @app.template_filter('get_row_class')
 def get_row_class(row):
     if children_are_same_orientation(row):
-        return 'column-' + str(len(row))
+        return 'layout-' + str(len(row)) + '-column'
 
     # if there are two images, we know they aren't the same orientation, so we
     # can just give it one class
     if len(row) == 2:
-        return 'two-photo-mix'
+        return 'layout-two-photo-mix'
 
     if len(row) == 3:
         portraits = filter((lambda(x): x['orientation'] == 'portrait'), row)
 
         if len(portraits) == 1:
-            return 'two-landscape-one-portrait'
+            return 'layout-two-landscape-one-portrait'
         else:
-            return 'two-portrait-one-landscape'
+            return 'layout-two-portrait-one-landscape'
 
     # anything that makes it down here doesn't have a style defined yet.
-    return 'butts'  # TODO
+    return 'layout-butts'  # TODO
 
 
 # routes

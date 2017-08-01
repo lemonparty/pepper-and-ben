@@ -86,7 +86,7 @@ $font-root: "./fonts/";
 
 	// 1 to 4 images of the same orientation
 	@for $i from 1 through 4 {
-		.column-#{$i} {
+		.layout-#{$i}-column {
 			.photos-photo {
 				@include photo-width($i - 1, 1/$i, $gutter);
 			}
@@ -94,7 +94,7 @@ $font-root: "./fonts/";
 	}
 
 	// two images of different orientations
-	.two-photo-mix {
+	.layout-two-photo-mix {
 		.isLandscape {
 			@include photo-width(1, 9/13, $gutter);
 		}
@@ -104,7 +104,7 @@ $font-root: "./fonts/";
 		}
 	}
 
-	.two-landscape-one-portrait {
+	.layout-two-landscape-one-portrait {
 		.isLandscape {
 			@include photo-width(2, 9/22, $gutter);
 		}
@@ -114,7 +114,7 @@ $font-root: "./fonts/";
 		}
 	}
 
-	.two-portrait-one-landscape {
+	.layout-two-portrait-one-landscape {
 		.isLandscape {
 			@include photo-width(2, 9/17, $gutter);
 		}

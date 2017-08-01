@@ -144,10 +144,10 @@ def index_route(params={}):
 
         # ceremony setting
         [
+            {'id': '320', 'orientation': 'landscape'},  # deb's dog
+        ], [
             {'id': '102', 'orientation': 'portrait'},  # chairs
             {'id': '153', 'orientation': 'portrait'},  # flowers still
-        ], [
-            {'id': '320', 'orientation': 'landscape'},  # deb's dog
         ], [
             {'id': '334', 'orientation': 'landscape'},  # cello still
         ],

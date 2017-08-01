@@ -127,10 +127,10 @@ def index_route(params={}):
             {'id': '180', 'orientation': 'portrait'},  # bouquet holding
             {'id': '191', 'orientation': 'portrait'},  # amy reaction
         ], [
-            {'id': '196', 'orientation': 'landscape'},  # mike bouquet
-        ], [
             {'id': '181', 'orientation': 'portrait'},  # bouquet closeup
             {'id': '220', 'orientation': 'portrait'},  # shoes on
+        ], [
+            {'id': '196', 'orientation': 'landscape'},  # mike bouquet
         ],
 
         # ben nervous
@@ -337,12 +337,12 @@ def index_route(params={}):
 
         # formals
         [
-            {'id': '839', 'orientation': 'landscape'},  # greens
-        ], [
             {'id': '848', 'orientation': 'landscape'},  # ben dad & stepmom
         ], [
             {'id': '961', 'orientation': 'landscape'},  # ben dad extended 1
             {'id': '966', 'orientation': 'landscape'},  # ben dad extended 2
+        ], [
+            {'id': '839', 'orientation': 'landscape'},  # greens
         ], [
             {'id': '886', 'orientation': 'landscape'},  # ben mom
             {'id': '860', 'orientation': 'landscape'},  # ben mom extended
@@ -446,10 +446,10 @@ def index_route(params={}):
 
         # reception part three - wind down
         [
-            {'id': '1221', 'orientation': 'landscape'},  # overall scene - late
-        ], [
             {'id': '1319', 'orientation': 'portrait'},  # suit jacket on shed
             {'id': '1240', 'orientation': 'portrait'},  # bros
+        ], [
+            {'id': '1221', 'orientation': 'landscape'},  # overall scene - late
         ], [
             {'id': '1243', 'orientation': 'portrait'},  # cute couple #1
             {'id': '1391', 'orientation': 'portrait'},  # maggie and kurt
@@ -457,15 +457,16 @@ def index_route(params={}):
 
         # epic couple - shed & solar
         [
+            {'id': '1401', 'orientation': 'landscape'},  # tractor
             {'id': '1259', 'orientation': 'portrait'},
+        ], [
             {'id': '1285', 'orientation': 'landscape'},
+        ], [
             {'id': '1369', 'orientation': 'landscape'},
         ],
 
         # goodnight
         [
-            {'id': '1401', 'orientation': 'landscape'},  # tractor
-        ], [
             {'id': '1393', 'orientation': 'portrait'},  # pepper and ben
             {'id': '1403', 'orientation': 'portrait'},  # with deb
         ], [

@@ -17,6 +17,20 @@ def get_row_class(row):
     if children_are_same_orientation(row):
         return 'column-' + str(len(row))
 
+    # if there are two images, we know they aren't the same orientation, so we
+    # can just give it one class
+    if len(row) == 2:
+        return 'two-photo-mix'
+
+    if len(row) == 3:
+        portraits = filter((lambda(x): x['orientation'] == 'portrait'), row)
+
+        if len(portraits) == 1:
+            return 'two-landscape-one-portrait'
+        else:
+            return 'two-portrait-one-landscape'
+
+    # anything that makes it down here doesn't have a style defined yet.
     return 'butts'  # TODO
 
 
@@ -74,10 +88,10 @@ def index_route(params={}):
         [
             {'id': '67', 'orientation': 'landscape'},  # kitchen
         ], [
-            {'id': '234', 'orientation': 'portrait'},  # dave
             {'id': '83', 'orientation': 'portrait'},  # van
             {'id': '86', 'orientation': 'portrait'},  # trash cans
         ], [
+            {'id': '234', 'orientation': 'portrait'},  # dave
             {'id': '87', 'orientation': 'landscape'},  # wind tables
         ], [
             {'id': '149', 'orientation': 'portrait'},  # carry flowers
@@ -113,10 +127,10 @@ def index_route(params={}):
             {'id': '180', 'orientation': 'portrait'},  # bouquet holding
             {'id': '191', 'orientation': 'portrait'},  # amy reaction
         ], [
-            {'id': '196', 'orientation': 'landscape'},  # mike bouquet
-        ], [
             {'id': '181', 'orientation': 'portrait'},  # bouquet closeup
             {'id': '220', 'orientation': 'portrait'},  # shoes on
+        ], [
+            {'id': '196', 'orientation': 'landscape'},  # mike bouquet
         ],
 
         # ben nervous
@@ -130,10 +144,10 @@ def index_route(params={}):
 
         # ceremony setting
         [
+            {'id': '320', 'orientation': 'landscape'},  # deb's dog
+        ], [
             {'id': '102', 'orientation': 'portrait'},  # chairs
             {'id': '153', 'orientation': 'portrait'},  # flowers still
-        ], [
-            {'id': '320', 'orientation': 'landscape'},  # deb's dog
         ], [
             {'id': '334', 'orientation': 'landscape'},  # cello still
         ],
@@ -157,8 +171,8 @@ def index_route(params={}):
 
         # pinning flowers TODO
         [
-            {'id': '340', 'orientation': 'portrait'},
             {'id': '345', 'orientation': 'landscape'},
+            {'id': '340', 'orientation': 'portrait'},
         ], [
             {'id': '351', 'orientation': 'portrait'},
             {'id': '356', 'orientation': 'portrait'},
@@ -323,12 +337,12 @@ def index_route(params={}):
 
         # formals
         [
-            {'id': '839', 'orientation': 'landscape'},  # greens
-        ], [
             {'id': '848', 'orientation': 'landscape'},  # ben dad & stepmom
         ], [
             {'id': '961', 'orientation': 'landscape'},  # ben dad extended 1
             {'id': '966', 'orientation': 'landscape'},  # ben dad extended 2
+        ], [
+            {'id': '839', 'orientation': 'landscape'},  # greens
         ], [
             {'id': '886', 'orientation': 'landscape'},  # ben mom
             {'id': '860', 'orientation': 'landscape'},  # ben mom extended
@@ -432,10 +446,10 @@ def index_route(params={}):
 
         # reception part three - wind down
         [
-            {'id': '1221', 'orientation': 'landscape'},  # overall scene - late
-        ], [
             {'id': '1319', 'orientation': 'portrait'},  # suit jacket on shed
             {'id': '1240', 'orientation': 'portrait'},  # bros
+        ], [
+            {'id': '1221', 'orientation': 'landscape'},  # overall scene - late
         ], [
             {'id': '1243', 'orientation': 'portrait'},  # cute couple #1
             {'id': '1391', 'orientation': 'portrait'},  # maggie and kurt
@@ -443,15 +457,16 @@ def index_route(params={}):
 
         # epic couple - shed & solar
         [
+            {'id': '1401', 'orientation': 'landscape'},  # tractor
             {'id': '1259', 'orientation': 'portrait'},
+        ], [
             {'id': '1285', 'orientation': 'landscape'},
+        ], [
             {'id': '1369', 'orientation': 'landscape'},
         ],
 
         # goodnight
         [
-            {'id': '1401', 'orientation': 'landscape'},  # tractor
-        ], [
             {'id': '1393', 'orientation': 'portrait'},  # pepper and ben
             {'id': '1403', 'orientation': 'portrait'},  # with deb
         ], [

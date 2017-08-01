@@ -88,10 +88,10 @@ def index_route(params={}):
         [
             {'id': '67', 'orientation': 'landscape'},  # kitchen
         ], [
-            {'id': '234', 'orientation': 'portrait'},  # dave
             {'id': '83', 'orientation': 'portrait'},  # van
             {'id': '86', 'orientation': 'portrait'},  # trash cans
         ], [
+            {'id': '234', 'orientation': 'portrait'},  # dave
             {'id': '87', 'orientation': 'landscape'},  # wind tables
         ], [
             {'id': '149', 'orientation': 'portrait'},  # carry flowers

@@ -31,7 +31,9 @@ function createConfig(params) {
 			{
 				test: /\.(sass|scss)$/,
 				exclude: [/node_modules/],
-				loader: ExtractTextPlugin.extract("css-loader!sass-loader")
+				loader: ExtractTextPlugin.extract({
+					use: ["raw-loader", "sass-loader"],
+				})
 			},
 		]
 	};
@@ -40,8 +42,7 @@ function createConfig(params) {
 		new ExtractTextPlugin(`app${min}.css`, {
 			allChunks: true
 		}),
-		new WebpackNotifierPlugin(),
-		new webpack.IgnorePlugin(/.(png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/),
+		new WebpackNotifierPlugin()
 	];
 
 

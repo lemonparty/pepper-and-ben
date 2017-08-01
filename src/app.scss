@@ -51,7 +51,7 @@ $font-root: "./fonts/";
 
 @font-face {
   font-family: 'Goudy Bookletter';
-  src: local('Goudy Bookletter'), url('#{$font-root}goudy-bookletter.eot?#iefix') format('embedded-opentype'), url('#{$font-root}goudy-bookletter.woff') format('woff'), url('#{$font-root}goudy-bookletter.ttf') format('truetype'), url('#{$font-root}goudy-bookletter.svg#goudy-bookletter') format('svg');
+  src: local('Goudy Bookletter 1911'), url('#{$font-root}goudy-bookletter.eot?#iefix') format('embedded-opentype'), url('#{$font-root}goudy-bookletter.woff') format('woff'), url('#{$font-root}goudy-bookletter.ttf') format('truetype'), url('#{$font-root}goudy-bookletter.svg#goudy-bookletter') format('svg');
   font-weight: normal;
   font-style: normal;
 }

@@ -160,12 +160,6 @@ body {
 			@include photo-aspect-ratio(800, 1200);
 		}
 
-		@for $i from 1 through 4 {
-			.column-#{$i} & {
-				width: calc((100% - #{$gutter * ($i - 1)}) / #{$i});
-			}
-		}
-
 		&-content {
 			position: absolute;
 			top: 0;
@@ -199,5 +193,51 @@ body {
 		&:hover {
 			color: lighten($text, 15%);
 		}
+	}
+}
+
+
+// sizing for different layouts
+// ------------------------------------------------------------------------
+
+// 1 to 4 images of the same orientation
+@for $i from 1 through 4 {
+	.column-#{$i} {
+		.photos-photo {
+			width: calc((100% - #{$gutter * ($i - 1)}) / #{$i});
+		}
+	}
+}
+
+// two images of different orientations
+.two-photo-mix {
+	$big: 9/13 * 100%; // the multiplication casts it as a percentage
+
+	.isLandscape {
+		width: calc(#{$big} - #{$gutter / 2});
+	}
+
+	.isPortrait {
+		width: calc(#{100 - $big} - #{$gutter / 2});
+	}
+}
+
+.two-landscape {
+	.isLandscape {
+		width: 39%;
+	}
+
+	.isPortrait {
+		width: 18%;
+	}
+}
+
+.two-portrait {
+	.isLandscape {
+		width: 50%;
+	}
+
+	.isPortrait {
+		width: 23%;
 	}
 }

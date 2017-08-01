@@ -17,6 +17,20 @@ def get_row_class(row):
     if children_are_same_orientation(row):
         return 'column-' + str(len(row))
 
+    # if there are two images, we know they aren't the same orientation, so we
+    # can just give it one class
+    if len(row) == 2:
+        return 'two-photo-mix'
+
+    if len(row) == 3:
+        portraits = filter((lambda(x): x['orientation'] == 'portrait'), row)
+
+        if len(portraits) == 1:
+            return 'two-landscape'
+        else:
+            return 'two-portrait'
+
+    # anything that makes it down here doesn't have a style defined yet.
     return 'butts'  # TODO
 
 
@@ -157,8 +171,8 @@ def index_route(params={}):
 
         # pinning flowers TODO
         [
-            {'id': '340', 'orientation': 'portrait'},
             {'id': '345', 'orientation': 'landscape'},
+            {'id': '340', 'orientation': 'portrait'},
         ], [
             {'id': '351', 'orientation': 'portrait'},
             {'id': '356', 'orientation': 'portrait'},

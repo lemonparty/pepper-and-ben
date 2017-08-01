@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'GoudyBookletter1911';
+  src: url('GoudyBookletter1911.woff') format('woff'),
+       url('GoudyBookletter1911.ttf') format('truetype'),
+       url('GoudyBookletter1911.svg#GoudyBookletter1911') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'goudey-bookletter';
+  src: url('goudey-bookletter.eot');
+  src: url('goudey-bookletter.woff2') format('woff2'),
+       url('goudey-bookletter.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

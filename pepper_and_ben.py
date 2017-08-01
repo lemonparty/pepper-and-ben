@@ -344,7 +344,7 @@ def index_route(params={}):
         ], [
             {'id': '839', 'orientation': 'landscape'},  # greens
         ], [
-            {'id': '886', 'orientation': 'landscape'},  # ben mom
+            {'id': '886', 'orientation': 'portrait'},  # ben mom
             {'id': '860', 'orientation': 'landscape'},  # ben mom extended
         ], [
             {'id': '889', 'orientation': 'portrait'},

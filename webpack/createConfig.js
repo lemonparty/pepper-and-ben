@@ -41,6 +41,7 @@ function createConfig(params) {
 			allChunks: true
 		}),
 		new WebpackNotifierPlugin(),
+		new webpack.IgnorePlugin(/.(png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/),
 	];
 
 

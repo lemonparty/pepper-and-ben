@@ -26,9 +26,9 @@ def get_row_class(row):
         portraits = filter((lambda(x): x['orientation'] == 'portrait'), row)
 
         if len(portraits) == 1:
-            return 'two-landscape'
+            return 'two-landscape-one-portrait'
         else:
-            return 'two-portrait'
+            return 'two-portrait-one-landscape'
 
     # anything that makes it down here doesn't have a style defined yet.
     return 'butts'  # TODO

@@ -200,44 +200,46 @@ body {
 // sizing for different layouts
 // ------------------------------------------------------------------------
 
+@mixin photo-width($num-gutters, $relative-width) {
+  width: calc((100% - #{$gutter} * #{$num-gutters}) * #{$relative-width});
+}
+
 // 1 to 4 images of the same orientation
 @for $i from 1 through 4 {
 	.column-#{$i} {
 		.photos-photo {
-			width: calc((100% - #{$gutter * ($i - 1)}) / #{$i});
+			@include photo-width($i - 1, 1/$i);
 		}
 	}
 }
 
 // two images of different orientations
 .two-photo-mix {
-	$big: 9/13 * 100%; // the multiplication casts it as a percentage
-
 	.isLandscape {
-		width: calc(#{$big} - #{$gutter / 2});
+		@include photo-width(1, 9/13);
 	}
 
 	.isPortrait {
-		width: calc(#{100 - $big} - #{$gutter / 2});
+		@include photo-width(1, 4/13);
 	}
 }
 
-.two-landscape {
+.two-landscape-one-portrait {
 	.isLandscape {
-		width: 39%;
+		@include photo-width(2, 9/22);
 	}
 
 	.isPortrait {
-		width: 18%;
+		@include photo-width(2, 4/22);
 	}
 }
 
-.two-portrait {
+.two-portrait-one-landscape {
 	.isLandscape {
-		width: 50%;
+		@include photo-width(2, 9/17);
 	}
 
 	.isPortrait {
-		width: 23%;
+		@include photo-width(2, 4/17);
 	}
 }

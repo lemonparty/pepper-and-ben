@@ -2,7 +2,8 @@
 // ----------------------------------------------------------------------------
 
 $width: 1200px;
-$gutter: 1.5vw;
+$gutter-small-screens: 1.2vw;
+$gutter-large-screens: 10px;
 $br: 2px;
 
 $bg: #fdf5ee;
@@ -45,15 +46,83 @@ $font-root: "./fonts/";
   }
 }
 
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+@-moz-keyframes spin {
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
 
 @font-face {
   font-family: 'Goudy Bookletter';
-  src: local('Goudy Bookletter 1911'), url('#{$font-root}goudy-bookletter.eot?#iefix') format('embedded-opentype'), url('#{$font-root}goudy-bookletter.woff') format('woff'), url('#{$font-root}goudy-bookletter.ttf') format('truetype'), url('#{$font-root}goudy-bookletter.svg#goudy-bookletter') format('svg');
+  src: local('Goudy Bookletter 1911'),
+		url('#{$font-root}goudy-bookletter.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-root}goudy-bookletter.woff') format('woff'),
+		url('#{$font-root}goudy-bookletter.ttf') format('truetype'),
+		url('#{$font-root}goudy-bookletter.svg#goudy-bookletter') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+@mixin photo-width($num-gutters, $relative-width, $gutter) {
+  width: calc((100% - #{$gutter} * #{$num-gutters}) * #{$relative-width});
+}
+
+@mixin photo-layouts($gutter) {
+	// apply the gutter to each photo
+	.photos-photo {
+		margin-right: $gutter;
+		margin-bottom: $gutter;
+	}
+
+	// 1 to 4 images of the same orientation
+	@for $i from 1 through 4 {
+		.column-#{$i} {
+			.photos-photo {
+				@include photo-width($i - 1, 1/$i, $gutter);
+			}
+		}
+	}
+
+	// two images of different orientations
+	.two-photo-mix {
+		.isLandscape {
+			@include photo-width(1, 9/13, $gutter);
+		}
+
+		.isPortrait {
+			@include photo-width(1, 4/13, $gutter);
+		}
+	}
+
+	.two-landscape-one-portrait {
+		.isLandscape {
+			@include photo-width(2, 9/22, $gutter);
+		}
+
+		.isPortrait {
+			@include photo-width(2, 4/22, $gutter);
+		}
+	}
+
+	.two-portrait-one-landscape {
+		.isLandscape {
+			@include photo-width(2, 9/17, $gutter);
+		}
+
+		.isPortrait {
+			@include photo-width(2, 4/17, $gutter);
+		}
+	}
 }
 
 
@@ -69,9 +138,13 @@ body {
 }
 
 .content {
-	width: 96vw;
+	width: 88vw;
 	max-width: $width;
 	margin: 5vw auto;
+
+	@media (max-width: 700px) {
+		width: 96vw;
+	}
 
 	&-header,
 	&-subheader {
@@ -124,8 +197,6 @@ body {
 		position: relative;
 		overflow: hidden;
 		float: left;
-		margin-right: $gutter;
-		margin-bottom: $gutter;
 		width: 100%;
 		background: rgba(#000, 0.05);
 		border-radius: $br;
@@ -206,49 +277,13 @@ body {
 }
 
 
-// sizing for different layouts
+// call the layout styles
 // ------------------------------------------------------------------------
 
-@mixin photo-width($num-gutters, $relative-width) {
-  width: calc((100% - #{$gutter} * #{$num-gutters}) * #{$relative-width});
+@media (max-width: 1000px) {
+	@include photo-layouts($gutter-small-screens);
 }
 
-// 1 to 4 images of the same orientation
-@for $i from 1 through 4 {
-	.column-#{$i} {
-		.photos-photo {
-			@include photo-width($i - 1, 1/$i);
-		}
-	}
-}
-
-// two images of different orientations
-.two-photo-mix {
-	.isLandscape {
-		@include photo-width(1, 9/13);
-	}
-
-	.isPortrait {
-		@include photo-width(1, 4/13);
-	}
-}
-
-.two-landscape-one-portrait {
-	.isLandscape {
-		@include photo-width(2, 9/22);
-	}
-
-	.isPortrait {
-		@include photo-width(2, 4/22);
-	}
-}
-
-.two-portrait-one-landscape {
-	.isLandscape {
-		@include photo-width(2, 9/17);
-	}
-
-	.isPortrait {
-		@include photo-width(2, 4/17);
-	}
+@media (min-width: 1000px) {
+	@include photo-layouts($gutter-large-screens);
 }

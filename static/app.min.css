@@ -8,7 +8,6 @@
 
 @keyframes spin {
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
 @font-face {
@@ -25,9 +24,12 @@ body {
   font-family: "Goudy Bookletter", Georgia, serif; }
 
 .content {
-  width: 96vw;
+  width: 88vw;
   max-width: 1200px;
   margin: 5vw auto; }
+  @media (max-width: 700px) {
+    .content {
+      width: 96vw; } }
   .content-header, .content-subheader {
     display: block;
     width: 100%;
@@ -69,8 +71,6 @@ body {
   position: relative;
   overflow: hidden;
   float: left;
-  margin-right: 1.5vw;
-  margin-bottom: 1.5vw;
   width: 100%;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 2px; }
@@ -145,32 +145,52 @@ body {
     .footer a:hover {
       color: #4891a9; }
 
-.column-1 .photos-photo {
-  width: calc((100% - 1.5vw * 0) * 1); }
+@media (max-width: 1000px) {
+  .photos-photo {
+    margin-right: 1.2vw;
+    margin-bottom: 1.2vw; }
+  .column-1 .photos-photo {
+    width: calc((100% - 1.2vw * 0) * 1); }
+  .column-2 .photos-photo {
+    width: calc((100% - 1.2vw * 1) * 0.5); }
+  .column-3 .photos-photo {
+    width: calc((100% - 1.2vw * 2) * 0.33333); }
+  .column-4 .photos-photo {
+    width: calc((100% - 1.2vw * 3) * 0.25); }
+  .two-photo-mix .isLandscape {
+    width: calc((100% - 1.2vw * 1) * 0.69231); }
+  .two-photo-mix .isPortrait {
+    width: calc((100% - 1.2vw * 1) * 0.30769); }
+  .two-landscape-one-portrait .isLandscape {
+    width: calc((100% - 1.2vw * 2) * 0.40909); }
+  .two-landscape-one-portrait .isPortrait {
+    width: calc((100% - 1.2vw * 2) * 0.18182); }
+  .two-portrait-one-landscape .isLandscape {
+    width: calc((100% - 1.2vw * 2) * 0.52941); }
+  .two-portrait-one-landscape .isPortrait {
+    width: calc((100% - 1.2vw * 2) * 0.23529); } }
 
-.column-2 .photos-photo {
-  width: calc((100% - 1.5vw * 1) * 0.5); }
-
-.column-3 .photos-photo {
-  width: calc((100% - 1.5vw * 2) * 0.33333); }
-
-.column-4 .photos-photo {
-  width: calc((100% - 1.5vw * 3) * 0.25); }
-
-.two-photo-mix .isLandscape {
-  width: calc((100% - 1.5vw * 1) * 0.69231); }
-
-.two-photo-mix .isPortrait {
-  width: calc((100% - 1.5vw * 1) * 0.30769); }
-
-.two-landscape-one-portrait .isLandscape {
-  width: calc((100% - 1.5vw * 2) * 0.40909); }
-
-.two-landscape-one-portrait .isPortrait {
-  width: calc((100% - 1.5vw * 2) * 0.18182); }
-
-.two-portrait-one-landscape .isLandscape {
-  width: calc((100% - 1.5vw * 2) * 0.52941); }
-
-.two-portrait-one-landscape .isPortrait {
-  width: calc((100% - 1.5vw * 2) * 0.23529); }
+@media (min-width: 1000px) {
+  .photos-photo {
+    margin-right: 10px;
+    margin-bottom: 10px; }
+  .column-1 .photos-photo {
+    width: calc((100% - 10px * 0) * 1); }
+  .column-2 .photos-photo {
+    width: calc((100% - 10px * 1) * 0.5); }
+  .column-3 .photos-photo {
+    width: calc((100% - 10px * 2) * 0.33333); }
+  .column-4 .photos-photo {
+    width: calc((100% - 10px * 3) * 0.25); }
+  .two-photo-mix .isLandscape {
+    width: calc((100% - 10px * 1) * 0.69231); }
+  .two-photo-mix .isPortrait {
+    width: calc((100% - 10px * 1) * 0.30769); }
+  .two-landscape-one-portrait .isLandscape {
+    width: calc((100% - 10px * 2) * 0.40909); }
+  .two-landscape-one-portrait .isPortrait {
+    width: calc((100% - 10px * 2) * 0.18182); }
+  .two-portrait-one-landscape .isLandscape {
+    width: calc((100% - 10px * 2) * 0.52941); }
+  .two-portrait-one-landscape .isPortrait {
+    width: calc((100% - 10px * 2) * 0.23529); } }

@@ -216,26 +216,23 @@ def index_route(params={}):
             {'id': '447', 'orientation': 'portrait'},  # dad delivery
             {'id': '451', 'orientation': 'portrait'},  # premature kiss
             {'id': '452', 'orientation': 'portrait'},  # mike's reaction
-        ], [
-            {'id': '463', 'orientation': 'landscape'},  # excited smiles
         ],
 
-        # ceremony - amy TODO
+        # ceremony - amy
         [
-            {'id': '469', 'orientation': 'landscape'},
             {'id': '475', 'orientation': 'portrait'},
             {'id': '483', 'orientation': 'landscape'},
         ],
 
-        # ceremony - liz TODO
+        # ceremony - liz
         [
             {'id': '491', 'orientation': 'landscape'},
             {'id': '328', 'orientation': 'landscape'},  # liz playing (trick!)
-            {'id': '490', 'orientation': 'portrait'},
         ],
 
         # ceremony - mom
         [
+            {'id': '490', 'orientation': 'portrait'},  # watching liz
             {'id': '506', 'orientation': 'landscape'},
         ], [
             {'id': '520', 'orientation': 'portrait'},
@@ -309,12 +306,12 @@ def index_route(params={}):
             {'id': '90', 'orientation': 'landscape'},  # lawn living room
         ], [
             {'id': '97', 'orientation': 'portrait'},  # plates
+            {'id': '1074', 'orientation': 'portrait'},  # cake
+        ], [
             {'id': '1173', 'orientation': 'portrait'},  # lemonade
+            {'id': '787', 'orientation': 'portrait'},  # solo chair
         ], [
             {'id': '1209', 'orientation': 'landscape'},  # flowers
-        ], [
-            {'id': '787', 'orientation': 'portrait'},  # solo chair
-            {'id': '1074', 'orientation': 'portrait'},  # cake
         ],
 
         # reception part one - mingling and drinking phase
@@ -367,8 +364,8 @@ def index_route(params={}):
             {'id': '977', 'orientation': 'portrait'},
         ], [
             {'id': '994', 'orientation': 'landscape'},
-            {'id': '995', 'orientation': 'landscape'},
             {'id': '1018', 'orientation': 'portrait'},  # first dance
+            {'id': '995', 'orientation': 'landscape'},
         ],
 
         # friend formals (greenhouse)
@@ -408,28 +405,22 @@ def index_route(params={}):
             {'id': '1170', 'orientation': 'landscape'},  # overall - closer
         ], [
             {'id': '1103', 'orientation': 'landscape'},  # pepper mingling
+            {'id': '1165', 'orientation': 'portrait'},  # cooler sitter
         ], [
             {'id': '1226', 'orientation': 'portrait'},  # jenga
             {'id': '1207', 'orientation': 'portrait'},  # deb & greens cake
-        ], [
-            {'id': '1165', 'orientation': 'portrait'},  # cooler sitter
-            {'id': '1211', 'orientation': 'landscape'},  # corona girl
         ], [
             {'id': '1172', 'orientation': 'landscape'},  # overall - greenhouse
         ],
 
         # kubb
         [
-            {'id': '1089', 'orientation': 'portrait'},
-            {'id': '1185', 'orientation': 'portrait'},
+            {'id': '1089', 'orientation': 'portrait'},  # setting
+            {'id': '1212', 'orientation': 'portrait'},  # katur
         ], [
-            {'id': '1189', 'orientation': 'portrait'},
-            {'id': '1192', 'orientation': 'portrait'},
-        ], [
-            {'id': '1212', 'orientation': 'portrait'},
-            {'id': '1219', 'orientation': 'portrait'},
-        ], [
-            {'id': '1230', 'orientation': 'portrait'},
+            {'id': '1192', 'orientation': 'portrait'},  # action A
+            {'id': '1189', 'orientation': 'portrait'},  # action pepper
+            {'id': '1230', 'orientation': 'portrait'},  # action B
         ],
 
         # frisbee / playing

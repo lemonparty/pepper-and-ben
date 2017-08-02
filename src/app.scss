@@ -104,16 +104,7 @@ $font-root: "./fonts/";
 		}
 	}
 
-	.layout-two-landscape-one-portrait {
-		.isLandscape {
-			@include photo-width(2, 9/22, $gutter);
-		}
-
-		.isPortrait {
-			@include photo-width(2, 4/22, $gutter);
-		}
-	}
-
+	// these render in a row
 	.layout-two-portrait-one-landscape {
 		.isLandscape {
 			@include photo-width(2, 9/17, $gutter);
@@ -121,6 +112,25 @@ $font-root: "./fonts/";
 
 		.isPortrait {
 			@include photo-width(2, 4/17, $gutter);
+		}
+	}
+
+	// the two landscapes stack on top of each other
+	.layout-two-landscape-one-portrait {
+		.isLandscape {
+			@include photo-width(1, 10/19, $gutter);
+
+			&:last-child {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+		}
+
+		.isPortrait {
+			@include photo-width(1, 9/19, $gutter);
+			float: right;
+			margin-right: 0;
 		}
 	}
 }
@@ -138,7 +148,7 @@ body {
 }
 
 .content {
-	width: 88vw;
+	width: 75vw;
 	max-width: $width;
 	margin: 5vw auto;
 
@@ -190,6 +200,7 @@ body {
 
 	&-row {
 		@include clearfix;
+		position: relative;
 		width: 100%;
 	}
 

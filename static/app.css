@@ -24,7 +24,7 @@ body {
   font-family: "Goudy Bookletter", Georgia, serif; }
 
 .content {
-  width: 88vw;
+  width: 75vw;
   max-width: 1200px;
   margin: 5vw auto; }
   @media (max-width: 700px) {
@@ -61,6 +61,7 @@ body {
   display: table; }
 
 .photos-row {
+  position: relative;
   width: 100%; }
   .photos-row::after {
     clear: both;
@@ -161,14 +162,20 @@ body {
     width: calc((100% - 1.2vw * 1) * 0.69231); }
   .layout-two-photo-mix .isPortrait {
     width: calc((100% - 1.2vw * 1) * 0.30769); }
-  .layout-two-landscape-one-portrait .isLandscape {
-    width: calc((100% - 1.2vw * 2) * 0.40909); }
-  .layout-two-landscape-one-portrait .isPortrait {
-    width: calc((100% - 1.2vw * 2) * 0.18182); }
   .layout-two-portrait-one-landscape .isLandscape {
     width: calc((100% - 1.2vw * 2) * 0.52941); }
   .layout-two-portrait-one-landscape .isPortrait {
-    width: calc((100% - 1.2vw * 2) * 0.23529); } }
+    width: calc((100% - 1.2vw * 2) * 0.23529); }
+  .layout-two-landscape-one-portrait .isLandscape {
+    width: calc((100% - 1.2vw * 1) * 0.52632); }
+    .layout-two-landscape-one-portrait .isLandscape:last-child {
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+  .layout-two-landscape-one-portrait .isPortrait {
+    width: calc((100% - 1.2vw * 1) * 0.47368);
+    float: right;
+    margin-right: 0; } }
 
 @media (min-width: 1000px) {
   .photos-photo {
@@ -186,11 +193,17 @@ body {
     width: calc((100% - 10px * 1) * 0.69231); }
   .layout-two-photo-mix .isPortrait {
     width: calc((100% - 10px * 1) * 0.30769); }
-  .layout-two-landscape-one-portrait .isLandscape {
-    width: calc((100% - 10px * 2) * 0.40909); }
-  .layout-two-landscape-one-portrait .isPortrait {
-    width: calc((100% - 10px * 2) * 0.18182); }
   .layout-two-portrait-one-landscape .isLandscape {
     width: calc((100% - 10px * 2) * 0.52941); }
   .layout-two-portrait-one-landscape .isPortrait {
-    width: calc((100% - 10px * 2) * 0.23529); } }
+    width: calc((100% - 10px * 2) * 0.23529); }
+  .layout-two-landscape-one-portrait .isLandscape {
+    width: calc((100% - 10px * 1) * 0.52632); }
+    .layout-two-landscape-one-portrait .isLandscape:last-child {
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+  .layout-two-landscape-one-portrait .isPortrait {
+    width: calc((100% - 10px * 1) * 0.47368);
+    float: right;
+    margin-right: 0; } }

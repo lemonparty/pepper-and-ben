@@ -23,7 +23,7 @@ def get_row_class(row):
         return 'layout-two-photo-mix'
 
     if len(row) == 3:
-        portraits = filter((lambda(x): x['orientation'] == 'portrait'), row)
+        portraits = [pic for pic in row if pic['orientation'] == 'portrait']
 
         if len(portraits) == 1:
             return 'layout-two-landscape-one-portrait'

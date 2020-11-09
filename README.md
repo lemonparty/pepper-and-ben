@@ -12,10 +12,11 @@ minified static assets. The file just needs the key `DEBUG`, so an example is:
 
     DEBUG = False
 
-Assuming you have python and virtualenvwrapper on your system:
+Assuming you have python `3.7` or greater installed:
 * clone the repo
-* create a virtual environemnt with `mkvirtualenv pepper-and-ben`
-* install the required python packages with `pip install -r requirements.txt`
+* create a virtual environemnt with `python -m venv pepper-and-ben-venv`
+* activate the virtual environment with `source pepper-and-ben-venv/bin/activate`
+* install the python packages with `pip install -r requirements.txt`
 * start the server (at http://localhost:5000) with `python pepper-and-ben.py`
 
 The CSS is written using SASS, and the JS is written in es6. Both are managed

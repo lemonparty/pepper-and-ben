@@ -4,3 +4,4 @@ node_modules
 *.pyc
 *localsettings.py
 static/images
+pepper-and-ben-venv

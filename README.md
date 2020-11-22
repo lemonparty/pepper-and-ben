@@ -17,7 +17,7 @@ Assuming you have python `3.7` or greater installed:
 * create a virtual environment with `python -m venv pepper-and-ben-venv`
 * activate the virtual environment with `source pepper-and-ben-venv/bin/activate`
 * install the python packages with `pip install -r requirements.txt`
-* start the server (at http://localhost:5000) with `python pepper-and-ben.py`
+* start the server (at http://localhost:5000) with `python pepper_and_ben.py`
 
 The CSS is written using SASS, and the JS is written in es6. Both are managed
 with webpack. Assuming you already have node and npm installed, run `npm install`
